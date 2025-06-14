@@ -1,8 +1,8 @@
-//Para impedir do usuário digitar letras
+//Para impedir o usuário de digitar letras
 inputTelefone.addEventListener('keypress', function (e) {
-if (/[^0-9]/.test(e.key) && e.key !== "Enter") {
+    if (/[^0-9]/.test(e.key) && e.key !== "Enter") {
         e.preventDefault();
-    }
+    } 
 });
 
 //Preenchimento automático de caracteres especiais 
@@ -10,9 +10,9 @@ inputTelefone.addEventListener('input', function (e) {
     let valor = this.value.replace(/\D/g, ''); // Remove tudo que não for dígito
     
     if (valor.length > 11) {
-    valor = valor.slice(0, 11); // Limita a 11 dígitos
+        valor = valor.slice(0, 11); // Limita a 11 dígitos
     }
-
+    
     if (valor.length < 10){
         return
     } else if (valor.length === 10) {
